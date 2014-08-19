@@ -1,0 +1,468 @@
+#	.goutputstream-VUZAEX
+#	.goutputstream-XF2GGX
+#	.goutputstream-ZGJ4GX
+#	.goutputstream-ZYVXJX
+#	.gstreamer-0.10/
+#	.gtk-bookmarks
+#	.kde/
+#	.local/
+#	.mission-control/
+#	.mozilla/
+#	.pip/
+#	.pki/
+#	.profile
+#	.pulse-cookie
+#	.pulse/
+#	.thumbnails/
+#	.thunderbird/
+#	.xsession-errors
+#	.xsession-errors.old
+#	Desktop/
+#	Django_project/
+#	Documents/
+#	Downloads/
+#	Pictures/
+#	Ubuntu One/
+#	Videos/
+#	examples.desktop
+#	files
+#	frama-c-gui.config
+#	output.pdf
+#	papaer2
+nothing added to commit but untracked files present (use "git add" to track)
+gupta@gupta-XPS-L501X:~$ mkdir octobox
+gupta@gupta-XPS-L501X:~$ ls
+Desktop         examples.desktop    octobox     Public
+Django_project  files               output.pdf  Templates
+Documents       frama-c-gui.config  papaer2     Ubuntu One
+Downloads       Music               Pictures    Videos
+gupta@gupta-XPS-L501X:~$ cd octobox/
+gupta@gupta-XPS-L501X:~/octobox$ git init
+Initialized empty Git repository in /home/gupta/octobox/.git/
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta@gupta-XPS-L501X:~/octobox$ vi gupta.txt
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta.txt
+gupta@gupta-XPS-L501X:~/octobox$ git add gupta.txt
+gupta@gupta-XPS-L501X:~/octobox$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   gupta.txt
+#
+gupta@gupta-XPS-L501X:~/octobox$ git  removie gupta.txt
+git: 'removie' is not a git command. See 'git --help'.
+gupta@gupta-XPS-L501X:~/octobox$ git  remove gupta.txt
+git: 'remove' is not a git command. See 'git --help'.
+
+Did you mean this?
+	remote
+gupta@gupta-XPS-L501X:~/octobox$ man git
+gupta@gupta-XPS-L501X:~/octobox$ git --help
+usage: git [--version] [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [-c name=value] [--help]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help <command>' for more information on a specific command.
+gupta@gupta-XPS-L501X:~/octobox$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   gupta.txt
+#
+gupta@gupta-XPS-L501X:~/octobox$ git rm gupta.txt
+error: 'gupta.txt' has changes staged in the index
+(use --cached to keep the file, or -f to force removal)
+gupta@gupta-XPS-L501X:~/octobox$ git rm -f gupta.txt
+rm 'gupta.txt'
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta@gupta-XPS-L501X:~/octobox$ git status
+# On branch master
+#
+# Initial commit
+#
+nothing to commit (create/copy files and use "git add" to track)
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta@gupta-XPS-L501X:~/octobox$ vi gupta.txt
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta.txt
+gupta@gupta-XPS-L501X:~/octobox$ ls -l
+total 4
+-rw-rw-r-- 1 gupta gupta 19 Aug 19 16:53 gupta.txt
+gupta@gupta-XPS-L501X:~/octobox$ git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	gupta.txt
+nothing added to commit but untracked files present (use "git add" to track)
+gupta@gupta-XPS-L501X:~/octobox$ git add gupta.txt
+gupta@gupta-XPS-L501X:~/octobox$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   gupta.txt
+#
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta.txt  hello.txt  king.txt  octo
+gupta@gupta-XPS-L501X:~/octobox$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   gupta.txt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	hello.txt
+#	king.txt
+#	octo/
+gupta@gupta-XPS-L501X:~/octobox$ git commit -m "add king kong "
+[master (root-commit) c096aed] add king kong
+ Committer: gupta <gupta@gupta-XPS-L501X.(none)>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 10 insertions(+)
+ create mode 100644 gupta.txt
+gupta@gupta-XPS-L501X:~/octobox$ cat gupta.txt
+a
+B
+B
+B
+B
+B
+C
+C
+C
+
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta.txt  hello.txt  king.txt  octo
+gupta@gupta-XPS-L501X:~/octobox$ git add "*.txt"
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta.txt  hello.txt  king.txt  octo
+gupta@gupta-XPS-L501X:~/octobox$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   hello.txt
+#	new file:   king.txt
+#	new file:   octo/sigam.txt
+#
+gupta@gupta-XPS-L501X:~/octobox$ git commit -m "aLL fILES"
+[master d50d27e] aLL fILES
+ Committer: gupta <gupta@gupta-XPS-L501X.(none)>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 0 files changed
+ create mode 100644 hello.txt
+ create mode 100644 king.txt
+ create mode 100644 octo/sigam.txt
+gupta@gupta-XPS-L501X:~/octobox$ LS
+The program 'LS' is currently not installed.  You can install it by typing:
+sudo apt-get install sl
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta.txt  hello.txt  king.txt  octo
+gupta@gupta-XPS-L501X:~/octobox$ cat king.txt
+gupta@gupta-XPS-L501X:~/octobox$ git log
+commit d50d27e6d460c852da5f216481be2772d9560ad9
+Author: gupta <gupta@gupta-XPS-L501X.(none)>
+Date:   Tue Aug 19 17:03:27 2014 +0530
+
+    aLL fILES
+
+commit c096aed882316efb8be5ee6428b5956bd7718888
+Author: gupta <gupta@gupta-XPS-L501X.(none)>
+Date:   Tue Aug 19 16:58:59 2014 +0530
+
+    add king kong
+gupta@gupta-XPS-L501X:~/octobox$ cd
+gupta@gupta-XPS-L501X:~$ sudo apt-get install node.js
+[sudo] password for gupta: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package node.js
+E: Couldn't find any package by regex 'node.js'
+gupta@gupta-XPS-L501X:~$ cd octobox/
+gupta@gupta-XPS-L501X:~/octobox$ git remote add origin https://github.com/jithu21/try-git.git
+gupta@gupta-XPS-L501X:~/octobox$ git push -u origin master
+Username for 'https://github.com': jithu21
+Password for 'https://jithu21@github.com': 
+To https://github.com/jithu21/try-git.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta.txt  hello.txt  king.txt  octo
+gupta@gupta-XPS-L501X:~/octobox$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	hi.txt
+nothing added to commit but untracked files present (use "git add" to track)
+gupta@gupta-XPS-L501X:~/octobox$ git commit -m "Add new"
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	hi.txt
+nothing added to commit but untracked files present (use "git add" to track)
+gupta@gupta-XPS-L501X:~/octobox$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	hi.txt
+nothing added to commit but untracked files present (use "git add" to track)
+gupta@gupta-XPS-L501X:~/octobox$ git commit -m "hi"
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	hi.txt
+nothing added to commit but untracked files present (use "git add" to track)
+gupta@gupta-XPS-L501X:~/octobox$ git add hi.txt
+gupta@gupta-XPS-L501X:~/octobox$ git commit -m "hi"
+[master d6a8f33] hi
+ Committer: gupta <gupta@gupta-XPS-L501X.(none)>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 0 files changed
+ create mode 100644 hi.txt
+gupta@gupta-XPS-L501X:~/octobox$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+nothing to commit (working directory clean)
+gupta@gupta-XPS-L501X:~/octobox$ git log
+commit d6a8f333bee94285b6eb3178425e7ad48f202b79
+Author: gupta <gupta@gupta-XPS-L501X.(none)>
+Date:   Tue Aug 19 17:17:09 2014 +0530
+
+    hi
+
+commit d50d27e6d460c852da5f216481be2772d9560ad9
+Author: gupta <gupta@gupta-XPS-L501X.(none)>
+Date:   Tue Aug 19 17:03:27 2014 +0530
+
+    aLL fILES
+
+commit c096aed882316efb8be5ee6428b5956bd7718888
+Author: gupta <gupta@gupta-XPS-L501X.(none)>
+Date:   Tue Aug 19 16:58:59 2014 +0530
+
+    add king kong
+gupta@gupta-XPS-L501X:~/octobox$ git remote add origin https://github/jithu21/try-git.git
+fatal: remote origin already exists.
+gupta@gupta-XPS-L501X:~/octobox$ git push -u origin master
+Username for 'https://github.com': jithu21 
+Password for 'https://jithu21@github.com': 
+To https://github.com/jithu21/try-git.git
+   d50d27e..d6a8f33  master -> master
+Branch master set up to track remote branch master from origin.
+gupta@gupta-XPS-L501X:~/octobox$ git pull origin master
+From https://github.com/jithu21/try-git
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+gupta@gupta-XPS-L501X:~/octobox$ git diff HEAD
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta.txt  hello.txt  hi.txt  king.txt  octo
+gupta@gupta-XPS-L501X:~/octobox$ git add octo/s
+sigam.txt  sri.txt    
+gupta@gupta-XPS-L501X:~/octobox$ git add octo/sri.txt 
+gupta@gupta-XPS-L501X:~/octobox$ git diff HEAD
+diff --git a/octo/sri.txt b/octo/sri.txt
+new file mode 100644
+index 0000000..e69de29
+gupta@gupta-XPS-L501X:~/octobox$ git commit -m "New sri.txt"
+[master 82b5323] New sri.txt
+ Committer: gupta <gupta@gupta-XPS-L501X.(none)>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 0 files changed
+ create mode 100644 octo/sri.txt
+gupta@gupta-XPS-L501X:~/octobox$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+nothing to commit (working directory clean)
+gupta@gupta-XPS-L501X:~/octobox$ git diff --staged
+gupta@gupta-XPS-L501X:~/octobox$ git reset octo/sri.txt 
+gupta@gupta-XPS-L501X:~/octobox$ cd octo
+gupta@gupta-XPS-L501X:~/octobox/octo$ ls
+sigam.txt  sri.txt
+gupta@gupta-XPS-L501X:~/octobox/octo$ git rm sri.txt
+rm 'octo/sri.txt'
+gupta@gupta-XPS-L501X:~/octobox/octo$ ls
+sigam.txt
+gupta@gupta-XPS-L501X:~/octobox/octo$ git push -u origin master
+Username for 'https://github.com': jithu2140
+Password for 'https://jithu2140@github.com': 
+!a
+fatal: Authentication failed
+gupta@gupta-XPS-L501X:~/octobox/octo$ !a
+bash: !a: event not found
+gupta@gupta-XPS-L501X:~/octobox/octo$ git push -u origin master
+Username for 'https://github.com': jithu21
+Password for 'https://jithu21@github.com': 
+To https://github.com/jithu21/try-git.git
+   d6a8f33..82b5323  master -> master
+Branch master set up to track remote branch master from origin.
+gupta@gupta-XPS-L501X:~/octobox/octo$ git checkout -- sri.txt
+error: pathspec 'sri.txt' did not match any file(s) known to git.
+gupta@gupta-XPS-L501X:~/octobox/octo$ ls
+sigam.txt
+gupta@gupta-XPS-L501X:~/octobox/octo$ git checkout -- sigam.txt
+gupta@gupta-XPS-L501X:~/octobox/octo$ ls
+sigam.txt
+gupta@gupta-XPS-L501X:~/octobox/octo$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	deleted:    sri.txt
+#
+gupta@gupta-XPS-L501X:~/octobox/octo$ git branch clean_up
+gupta@gupta-XPS-L501X:~/octobox/octo$ ls
+sigam.txt
+gupta@gupta-XPS-L501X:~/octobox/octo$ git branch
+  clean_up
+* master
+gupta@gupta-XPS-L501X:~/octobox/octo$ git checkout master
+D	octo/sri.txt
+Already on 'master'
+gupta@gupta-XPS-L501X:~/octobox/octo$ git checkout clean_up
+D	octo/sri.txt
+Switched to branch 'clean_up'
+gupta@gupta-XPS-L501X:~/octobox/octo$ ls
+sigam.txt
+gupta@gupta-XPS-L501X:~/octobox/octo$ git branch
+* clean_up
+  master
+gupta@gupta-XPS-L501X:~/octobox/octo$ git rm "*.txt"
+rm 'octo/sigam.txt'
+gupta@gupta-XPS-L501X:~/octobox/octo$ ls
+gupta@gupta-XPS-L501X:~/octobox/octo$ cd
+gupta@gupta-XPS-L501X:~$ ls
+Desktop         examples.desktop    octobox     Public
+Django_project  files               output.pdf  Templates
+Documents       frama-c-gui.config  papaer2     Ubuntu One
+Downloads       Music               Pictures    Videos
+gupta@gupta-XPS-L501X:~$ cd octobox/
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta.txt  hello.txt  hi.txt  king.txt
+gupta@gupta-XPS-L501X:~/octobox$ git checkout master
+D	octo/sigam.txt
+D	octo/sri.txt
+Switched to branch 'master'
+gupta@gupta-XPS-L501X:~/octobox$ cd .git/
+branches/ hooks/    info/     logs/     objects/  refs/     
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta.txt  hello.txt  hi.txt  king.txt
+gupta@gupta-XPS-L501X:~/octobox$ git push -u origin master
+Username for 'https://github.com': jithu21
+Password for 'https://jithu21@github.com': 
+Branch master set up to track remote branch master from origin.
+Everything up-to-date
+gupta@gupta-XPS-L501X:~/octobox$ git branch
+  clean_up
+* master
+gupta@gupta-XPS-L501X:~/octobox$ git merge clean_up
+Already up-to-date.
+gupta@gupta-XPS-L501X:~/octobox$ git branch -d clean_up
+Deleted branch clean_up (was 82b5323).
+gupta@gupta-XPS-L501X:~/octobox$ cd octo
+bash: cd: octo: No such file or directory
+gupta@gupta-XPS-L501X:~/octobox$ ks
+ks: command not found
+gupta@gupta-XPS-L501X:~/octobox$ ls
+gupta.txt  hello.txt  hi.txt  king.txt
+gupta@gupta-XPS-L501X:~/octobox$ git push
+Username for 'https://github.com': jithu21
+Password for 'https://jithu21@github.com': 
+Everything up-to-date
+gupta@gupta-XPS-L501X:~/octobox$ ^C
+gupta@gupta-XPS-L501X:~/octobox$ 
+
